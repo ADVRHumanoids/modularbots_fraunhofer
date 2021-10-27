@@ -43,21 +43,6 @@ xbotcore_plugins:
     params:
       time: { value: 5, type: double }
 
-  # cartesio: 
-  #     thread: rt_main 
-  #     type: albero_cartesio_rt
-  #     params:
-  #       problem_description:
-  #         value: $(rospack find ModularBot_6DOF)/cartesio/ModularBot_cartesio_config.yaml
-  #         type: file
-  #       solver: {value: AlberoImpedance, type: string}
-  #       enable_feedback: {value: true, type: bool}
-  #       fc_map: {value: {grav: 0.2, dfl: 0.9}, type: map<double>}
-    
-  # gripper: 
-  #   thread: rt_main 
-  #   type: albero_gripper_rt
-
 # additional parameters that don't relate to any plugin
 xbotcore_param:
   /jm/tx_filter_autostart: { value: false, type: bool } # autostart joint filter
