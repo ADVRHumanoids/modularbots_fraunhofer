@@ -1,0 +1,20 @@
+stack:
+    -   - EE_1
+EE_1:
+    type: Interaction
+    base_link: base_link
+    distal_link: pen_A
+    stiffness:
+        - 50.0
+        - 50.0
+        - 50.0
+        - 1.0
+        - 1.0
+        - 1.0
+    damping:
+        - 0.7
+        - 0.7
+        - 0.7
+        - 0.7
+        - 0.7
+        - 0.7

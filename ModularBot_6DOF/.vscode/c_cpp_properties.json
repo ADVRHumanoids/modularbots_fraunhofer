@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/tree/xbot2_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/opt/xbot/include/**",
+        "/home/tree/xbot2_ws/src/cartesianinterface/include/**",
+        "/home/tree/xbot2_ws/src/cartesian-impedance-controller/cartesio_plugin/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

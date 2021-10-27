@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<model>
+  <name>ModularBot_6DOF</name>
+  <version>0.1</version>
+  <sdf version='1.6'>ModularBot_6DOF.sdf</sdf>
+
+  <author>
+   <name>Edoardo Romiti</name>
+   <email>edoardo.romiti@iit.it</email>
+  </author>
+
+  <description>
+    Simulation of the Alberobotics's ModularBot_6DOF.
+  </description>
+</model>

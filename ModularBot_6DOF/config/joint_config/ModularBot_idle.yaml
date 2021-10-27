@@ -1,0 +1,101 @@
+zmq_setup:
+    timeout: 1000
+J1_A:
+    control_mode: idle
+    max_current_A: 20.0
+    pid:
+        impedance:
+            - 500.0
+            - 20.0
+            - 1.0
+            - 0.025
+            - 0.99
+        position:
+            - 1000.0
+            - 0.0
+            - 30.0
+    pos_offset: 0
+    sign: 1
+J2_A:
+    control_mode: idle
+    max_current_A: 30.0
+    pid:
+        impedance:
+            - 500.0
+            - 20.0
+            - 1.0
+            - 0.025
+            - 0.99
+        position:
+            - 1000.0
+            - 0.0
+            - 30.0
+    pos_offset: 0
+    sign: 1
+J3_A:
+    control_mode: idle
+    max_current_A: 20.0
+    pid:
+        impedance:
+            - 500.0
+            - 20.0
+            - 1.0
+            - 0.025
+            - 0.99
+        position:
+            - 1000.0
+            - 0.0
+            - 30.0
+    pos_offset: 0
+    sign: 1
+J4_A:
+    control_mode: idle
+    max_current_A: 30.0
+    pid:
+        impedance:
+            - 500.0
+            - 20.0
+            - 1.0
+            - 0.025
+            - 0.99
+        position:
+            - 1000.0
+            - 0.0
+            - 30.0
+    pos_offset: 0
+    sign: 1
+J5_A:
+    control_mode: idle
+    max_current_A: 20.0
+    pid:
+        impedance:
+            - 500.0
+            - 20.0
+            - 1.0
+            - 0.025
+            - 0.99
+        position:
+            - 1000.0
+            - 0.0
+            - 30.0
+    pos_offset: 0
+    sign: 1
+J6_A:
+    control_mode: idle
+    max_current_A: 30.0
+    pid:
+        impedance:
+            - 500.0
+            - 20.0
+            - 1.0
+            - 0.025
+            - 0.99
+        position:
+            - 1000.0
+            - 0.0
+            - 30.0
+    pos_offset: 0
+    sign: 1
+tool_exchanger_A:
+    analog_sample_freq_HZ: 1000
+    control_mode: idle

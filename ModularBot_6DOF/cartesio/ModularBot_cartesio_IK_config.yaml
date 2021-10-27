@@ -1,0 +1,6 @@
+stack:
+    -   - EE_1
+EE_1:
+    type: Cartesian
+    base_link: base_link
+    distal_link: pen_A

@@ -1,0 +1,611 @@
+<sdf version='1.6'>
+  <model name='ModularBot_6DOF'>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0.018098 0 -0 0</pose>
+        <mass>12.0555</mass>
+        <inertia>
+          <ixx>0.0308986</ixx>
+          <ixy>-1.14168e-05</ixy>
+          <ixz>2.71689e-06</ixz>
+          <iyy>0.030795</iyy>
+          <iyz>8.76312e-05</iyz>
+          <izz>0.00420263</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__J1_A_stator_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/yaw_base.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__J1_A_stator_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/yaw_base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='world' type='fixed'>
+      <child>base_link</child>
+      <parent>world</parent>
+    </joint>
+    <link name='L_1_A'>
+      <pose frame=''>0 0 0.214 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0.010252 0.060009 0 -0 0</pose>
+        <mass>2.48315</mass>
+        <inertia>
+          <ixx>0.0192862</ixx>
+          <ixy>1.85392e-05</ixy>
+          <ixz>2.94205e-05</ixz>
+          <iyy>0.0181103</iyy>
+          <iyz>0.00126496</iyz>
+          <izz>0.133646</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_1_A_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/yaw_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='L_1_A_fixed_joint_lump__J2_A_stator_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/elbow_base.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_1_A_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/yaw_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='L_1_A_fixed_joint_lump__J2_A_stator_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/elbow_base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='J1_A' type='revolute'>
+      <child>L_1_A</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.8</lower>
+          <upper>2.8</upper>
+          <effort>147</effort>
+          <velocity>3.9</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='L_2_A'>
+      <pose frame=''>0 0.07215 0.346057 -1.57 0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0.159202 -0.06247 0 -0 0</pose>
+        <mass>3.35626</mass>
+        <inertia>
+          <ixx>0.0500705</ixx>
+          <ixy>3.81369e-06</ixy>
+          <ixz>-1.13096e-05</ixz>
+          <iyy>0.00684618</iyy>
+          <iyz>-0.00470239</iyz>
+          <izz>0.177652</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_2_A_collision'>
+        <pose frame=''>0 0 -0.072 3.14159 0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/elbow_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='L_2_A_fixed_joint_lump__J3_A_stator_collision_1'>
+        <pose frame=''>0 -0.132 -0.072045 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/yaw_base.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_2_A_visual'>
+        <pose frame=''>0 0 -0.072 3.14159 0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/elbow_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='L_2_A_fixed_joint_lump__J3_A_stator_visual_1'>
+        <pose frame=''>0 -0.132 -0.072045 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/yaw_base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='J2_A' type='revolute'>
+      <child>L_2_A</child>
+      <parent>L_1_A</parent>
+      <axis>
+        <xyz>0 1 0.000796</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>147</effort>
+          <velocity>3.9</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='L_3_A'>
+      <pose frame=''>0 -0 0.692 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0.010252 0.060009 0 -0 0</pose>
+        <mass>2.48315</mass>
+        <inertia>
+          <ixx>0.0192862</ixx>
+          <ixy>1.85392e-05</ixy>
+          <ixz>2.94205e-05</ixz>
+          <iyy>0.0181103</iyy>
+          <iyz>0.00126496</iyz>
+          <izz>0.133646</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_3_A_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/yaw_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='L_3_A_fixed_joint_lump__J4_A_stator_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/elbow_base.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_3_A_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/yaw_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='L_3_A_fixed_joint_lump__J4_A_stator_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/elbow_base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='J3_A' type='revolute'>
+      <child>L_3_A</child>
+      <parent>L_2_A</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.8</lower>
+          <upper>2.8</upper>
+          <effort>147</effort>
+          <velocity>3.9</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='L_4_A'>
+      <pose frame=''>0 0.07215 0.824057 -1.57 0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0.159202 -0.06247 0 -0 0</pose>
+        <mass>3.35626</mass>
+        <inertia>
+          <ixx>0.0500705</ixx>
+          <ixy>3.81369e-06</ixy>
+          <ixz>-1.13096e-05</ixz>
+          <iyy>0.00684618</iyy>
+          <iyz>-0.00470239</iyz>
+          <izz>0.177652</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_4_A_collision'>
+        <pose frame=''>0 0 -0.072 3.14159 0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/elbow_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='L_4_A_fixed_joint_lump__J5_A_stator_collision_1'>
+        <pose frame=''>0 -0.132 -0.072045 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/yaw_base.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_4_A_visual'>
+        <pose frame=''>0 0 -0.072 3.14159 0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/elbow_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='L_4_A_fixed_joint_lump__J5_A_stator_visual_1'>
+        <pose frame=''>0 -0.132 -0.072045 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/yaw_base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='J4_A' type='revolute'>
+      <child>L_4_A</child>
+      <parent>L_3_A</parent>
+      <axis>
+        <xyz>0 1 0.000796</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>147</effort>
+          <velocity>3.9</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='L_5_A'>
+      <pose frame=''>0 -0 1.17 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0.010252 0.060009 0 -0 0</pose>
+        <mass>2.48315</mass>
+        <inertia>
+          <ixx>0.0192862</ixx>
+          <ixy>1.85392e-05</ixy>
+          <ixz>2.94205e-05</ixz>
+          <iyy>0.0181103</iyy>
+          <iyz>0.00126496</iyz>
+          <izz>0.133646</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_5_A_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/yaw_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='L_5_A_fixed_joint_lump__J6_A_stator_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/elbow_base.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_5_A_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/yaw_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='L_5_A_fixed_joint_lump__J6_A_stator_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/elbow_base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='J5_A' type='revolute'>
+      <child>L_5_A</child>
+      <parent>L_4_A</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.8</lower>
+          <upper>2.8</upper>
+          <effort>147</effort>
+          <velocity>3.9</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='L_6_A'>
+      <pose frame=''>0 0.07215 1.30206 -1.57 0 0</pose>
+      <inertial>
+        <pose frame=''>-0.003506 -0.105342 -0.059762 0 -0 0</pose>
+        <mass>2.60577</mass>
+        <inertia>
+          <ixx>0.021173</ixx>
+          <ixy>-0.000638918</ixy>
+          <ixz>-0.00011178</ixz>
+          <iyy>0.00547889</iyy>
+          <iyz>-0.00290942</iyz>
+          <izz>0.149361</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_6_A_collision'>
+        <pose frame=''>0 0 -0.072 3.14159 0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/simple/elbow_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='L_6_A_fixed_joint_lump__tool_exchanger_A_collision_1'>
+        <pose frame=''>0 -0.132 -0.072045 -1.57 -0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/tool_exchanger.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_6_A_visual'>
+        <pose frame=''>0 0 -0.072 3.14159 0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/elbow_link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='L_6_A_fixed_joint_lump__tool_exchanger_A_visual_1'>
+        <pose frame=''>0 -0.132 -0.072045 -1.57 -0.001593 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://ModularBot_6DOF/database/modular/meshes/tool_exchanger.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='J6_A' type='revolute'>
+      <child>L_6_A</child>
+      <parent>L_5_A</parent>
+      <axis>
+        <xyz>0 1 0.000796</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>147</effort>
+          <velocity>3.9</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <static>0</static>
+    <plugin name='xbot2_gz_joint_server' filename='libxbot2_gz_joint_server.so'>
+      <pid>
+        <pid name='J1_A' profile='small_mot'/>
+        <pid name='J2_A' profile='small_mot'/>
+        <pid name='J3_A' profile='small_mot'/>
+        <pid name='J4_A' profile='small_mot'/>
+        <pid name='J5_A' profile='small_mot'/>
+        <pid name='J6_A' profile='small_mot'/>
+      </pid>
+      <gain d='5' name='small_mot' p='100'/>
+    </plugin>
+  </model>
+</sdf>
