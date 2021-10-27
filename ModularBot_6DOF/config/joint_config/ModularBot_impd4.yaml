@@ -2,7 +2,6 @@ zmq_setup:
     timeout: 1000
 J1_A:
     control_mode: D4_impedance_ctrl
-    max_current_A: 20.0
     pid:
         impedance:
             - 500.0
@@ -14,11 +13,8 @@ J1_A:
             - 1000.0
             - 0.0
             - 30.0
-    pos_offset: 0
-    sign: 1
 J2_A:
     control_mode: D4_impedance_ctrl
-    max_current_A: 30.0
     pid:
         impedance:
             - 500.0
@@ -30,11 +26,8 @@ J2_A:
             - 1000.0
             - 0.0
             - 30.0
-    pos_offset: 0
-    sign: 1
 J3_A:
     control_mode: D4_impedance_ctrl
-    max_current_A: 20.0
     pid:
         impedance:
             - 500.0
@@ -46,11 +39,8 @@ J3_A:
             - 1000.0
             - 0.0
             - 30.0
-    pos_offset: 0
-    sign: 1
 J4_A:
     control_mode: D4_impedance_ctrl
-    max_current_A: 30.0
     pid:
         impedance:
             - 500.0
@@ -62,11 +52,8 @@ J4_A:
             - 1000.0
             - 0.0
             - 30.0
-    pos_offset: 0
-    sign: 1
 J5_A:
     control_mode: D4_impedance_ctrl
-    max_current_A: 20.0
     pid:
         impedance:
             - 500.0
@@ -78,11 +65,8 @@ J5_A:
             - 1000.0
             - 0.0
             - 30.0
-    pos_offset: 0
-    sign: 1
 J6_A:
     control_mode: D4_impedance_ctrl
-    max_current_A: 30.0
     pid:
         impedance:
             - 500.0
@@ -94,5 +78,3 @@ J6_A:
             - 1000.0
             - 0.0
             - 30.0
-    pos_offset: 0
-    sign: 1
