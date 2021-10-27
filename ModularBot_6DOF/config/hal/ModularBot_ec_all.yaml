@@ -24,6 +24,7 @@ xbotcore_devices:
         thread: rt_main
         params:
             joint_id_map: *id001
+    
     imu_ec:
         names: []
         thread: rt_main

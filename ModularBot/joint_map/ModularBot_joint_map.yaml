@@ -1,0 +1,10 @@
+albero_gripper_map: 
+  89: 
+    fingers: 
+      - gripper_A_rightfinger
+      - gripper_A_leftfinger
+    name: gripper_A
+joint_map: 
+  13: J1_A
+  201: HUB_201
+

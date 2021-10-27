@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<robot name="ModularBot">
+   <group name="chain_A">
+      <chain base_link="L_0_A" tip_link="TCP_gripper_A"/>
+   </group>
+   <group name="arms">
+      <group name="chain_A"/>
+   </group>
+   <group name="chains">
+      <group name="chain_A"/>
+   </group>
+   <group_state group="chains" name="home">
+      <joint name="J1_A" value="0.0"/>
+   </group_state>
+   <group name="ToolExchanger"/>
+</robot>
