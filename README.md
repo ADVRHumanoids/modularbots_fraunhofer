@@ -11,7 +11,7 @@ Given a particular configuration of choice (say `ModularBot_6DOF`), the simulati
 
 ## Running the hardware
 On the real robot, the following steps must be followed:
-  - [terminal #1] run the EtherCat master
+  - [terminal #1] run the EtherCat master (starts the boards)
     - `ecat_master` 
     - wait for it to stop printing
  - [terminal #2] run xbot2 (starts motors in impedance mode)
