@@ -9,7 +9,7 @@ Given a particular configuration of choice (say `ModularBot_6DOF`), the simulati
  - [terminal #2] run xbot2 (attaches to simulation time)
    - `xbot2-core --simtime --config $(rospack find ModularBot_6DOF)/config/ModularBot.yaml`
 
-## Running the hardare
+## Running the hardware
 On the real robot, the following steps must be followed:
   - [terminal #1] run the EtherCat master
     - `ecat_master` 
