@@ -1,6 +1,20 @@
+solver_options:
+  regularization: 1e-4
+
 stack:
-    -   - EE_1
+    - [EE_1]
+
+constraints:
+  - joint_limits
+  - velocity_limits
+
 EE_1:
     type: Cartesian
     base_link: base_link
     distal_link: pen_A
+
+joint_limits:
+    type: JointLimits
+
+velocity_limits:
+    type: VelocityLimits
