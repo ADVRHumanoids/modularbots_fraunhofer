@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <model>
-  <name>ModularBot</name>
+  <name>ModularBot_1DOF</name>
   <version>0.1</version>
-  <sdf version='1.6'>ModularBot.sdf</sdf>
+  <sdf version='1.6'>ModularBot_1DOF.sdf</sdf>
 
   <author>
    <name>Edoardo Romiti</name>
@@ -10,6 +10,6 @@
   </author>
 
   <description>
-    Simulation of the Alberobotics's ModularBot.
+    Simulation of the Alberobotics's ModularBot_1DOF.
   </description>
 </model>

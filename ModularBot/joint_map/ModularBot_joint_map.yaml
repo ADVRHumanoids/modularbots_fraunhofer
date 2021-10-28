@@ -1,8 +1,8 @@
-albero_gripper_map: 
-  89: 
-    fingers: 
-      - gripper_A_rightfinger
-      - gripper_A_leftfinger
+albero_gripper_map:
+  2:
+    fingers:
+    - gripper_A_rightfinger
+    - gripper_A_leftfinger
     name: gripper_A
 joint_map: 
   100: J1_A
