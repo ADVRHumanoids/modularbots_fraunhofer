@@ -31,8 +31,7 @@ xbotcore_plugins:
   # inside a thread with `other` priority
   ros_io: { thread: nrt_main, type: ros_io }
   ros_ctrl: { thread: nrt_main, type: ros_control }
-  ec_ros: { thread: nrt_main, type: ec_ros }
-
+ 
   # additional parameters that don't relate to any plugin
 xbotcore_param:
   /jm/tx_filter_autostart: { value: true, type: bool } # autostart joint filter
