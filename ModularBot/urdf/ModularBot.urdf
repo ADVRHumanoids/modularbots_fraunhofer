@@ -45,12 +45,14 @@
   <gazebo>
     <plugin filename="libxbot2_gz_joint_server.so" name="xbot2_gz_joint_server">
       <pid>
-        <pid name="J1_A" profile="small_mot"/>
-        <pid name="gripper_A_finger_joint1" profile="small_mot"/>
-        <pid name="gripper_A_finger_joint2" profile="small_mot"/>
+	      <gain d="10" name="small_mot" p="100"/>
+      	<gain d="50" name="medium_mot" p="500"/>
+      	<gain d="100" name="big_mot" p="1000"/>        
+	      <gain name="J1_A" profile="medium_mot"/>
+        <gain name="gripper_A_finger_joint1" profile="medium_mot"/>
+        <gain name="gripper_A_finger_joint2" profile="medium_mot"/>
       </pid>
-      <gain d="5" name="small_mot" p="100"/>
-      <gain d="20" name="medium_mot" p="500"/>
+      
     </plugin>
   </gazebo>
   <!-- <xacro:unless value="${ module['visual']['mesh_body_1'] == '' }">

@@ -45,8 +45,9 @@
   <gazebo>
     <plugin filename="libxbot2_gz_joint_server.so" name="xbot2_gz_joint_server">
       <pid>
-        <gain d="5" name="small_mot" p="100"/>
-        <gain d="20" name="medium_mot" p="500"/>
+        <gain d="10" name="small_mot" p="100"/>
+        <gain d="50" name="medium_mot" p="500"/>
+	      <gain d="100" name="big_mot" p="1000"/>
         <gain name="J1_A" profile="medium_mot"/>
         <gain name="J2_A" profile="medium_mot"/>
         <gain name="J3_A" profile="medium_mot"/>
