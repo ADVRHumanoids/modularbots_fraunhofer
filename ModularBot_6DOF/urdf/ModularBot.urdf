@@ -45,15 +45,15 @@
   <gazebo>
     <plugin filename="libxbot2_gz_joint_server.so" name="xbot2_gz_joint_server">
       <pid>
-        <pid name="J1_A" profile="medium_mot"/>
-        <pid name="J2_A" profile="medium_mot"/>
-        <pid name="J3_A" profile="medium_mot"/>
-        <pid name="J4_A" profile="medium_mot"/>
-        <pid name="J5_A" profile="medium_mot"/>
-        <pid name="J6_A" profile="medium_mot"/>
+        <gain d="5" name="small_mot" p="100"/>
+        <gain d="20" name="medium_mot" p="500"/>
+        <gain name="J1_A" profile="medium_mot"/>
+        <gain name="J2_A" profile="medium_mot"/>
+        <gain name="J3_A" profile="medium_mot"/>
+        <gain name="J4_A" profile="medium_mot"/>
+        <gain name="J5_A" profile="medium_mot"/>
+        <gain name="J6_A" profile="medium_mot"/>
       </pid>
-      <gain d="5" name="small_mot" p="100"/>
-      <gain d="20" name="medium_mot" p="500"/>
     </plugin>
   </gazebo>
   <joint name="fixed_J1_A" type="fixed">
