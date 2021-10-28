@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="ModularBot">
+<robot name="ModularBot_1DOF">
    <group name="chain_A">
       <chain base_link="base_link" tip_link="TCP_gripper_A"/>
    </group>
@@ -12,3 +12,4 @@
    <group_state group="chains" name="home">
       <joint name="J1_A" value="0.5"/>
    </group_state>
+</robot>

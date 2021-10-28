@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ModularBot)
+project(ModularBot_1DOF)
 
 find_package(catkin REQUIRED)
 catkin_package()

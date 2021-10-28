@@ -1,50 +1,25 @@
 <sdf version='1.6'>
-  <model name='ModularBot'>
+  <model name='ModularBot_1DOF'>
     <link name='base_link'>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose frame=''>0 -0.002059 0.024705 0 -0 0</pose>
-        <mass>12.3628</mass>
+        <pose frame=''>0 -0.01297 0.091019 0 -0 0</pose>
+        <mass>1.9628</mass>
         <inertia>
-          <ixx>0.0481449</ixx>
+          <ixx>0.00995755</ixx>
           <ixy>6.87805e-06</ixy>
           <ixz>2.49769e-05</ixz>
-          <iyy>0.0467556</iyy>
-          <iyz>0.00367163</iyz>
-          <izz>0.00598109</izz>
+          <iyy>0.00884604</iyy>
+          <iyz>0.000455973</iyz>
+          <izz>0.00480332</izz>
         </inertia>
       </inertial>
-      <collision name='base_link_fixed_joint_lump__L_0_A_collision'>
-        <pose frame=''>0 0 0.03 0 -0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.06</length>
-            <radius>0.06</radius>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <kp>1e+06</kp>
-              <kd>1</kd>
-              <max_vel>0</max_vel>
-              <min_depth>0.0001</min_depth>
-            </ode>
-          </contact>
-          <friction>
-            <ode>
-              <mu>0.2</mu>
-              <mu2>0.2</mu2>
-            </ode>
-          </friction>
-        </surface>
-      </collision>
-      <collision name='base_link_fixed_joint_lump__J1_A_stator_collision_1'>
-        <pose frame=''>0 0 0.06 0 -0 0</pose>
+      <collision name='base_link_fixed_joint_lump__J1_A_stator_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/simple/elbow_base.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/simple/elbow_base.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -64,27 +39,12 @@
           </friction>
         </surface>
       </collision>
-      <visual name='base_link_fixed_joint_lump__L_0_A_visual'>
-        <pose frame=''>0 0 0.03 0 -0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.06</length>
-            <radius>0.06</radius>
-          </cylinder>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
-        </material>
-      </visual>
-      <visual name='base_link_fixed_joint_lump__J1_A_stator_visual_1'>
-        <pose frame=''>0 0 0.06 0 -0 0</pose>
+      <visual name='base_link_fixed_joint_lump__J1_A_stator_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/elbow_base.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/elbow_base.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -94,7 +54,6 @@
           </script>
         </material>
       </visual>
-      <velocity_decay/>
       <gravity>1</gravity>
       <velocity_decay/>
     </link>
@@ -103,7 +62,7 @@
       <parent>world</parent>
     </joint>
     <link name='L_1_A'>
-      <pose frame=''>0 0.07215 0.192057 -1.57 0 0</pose>
+      <pose frame=''>0 0.07215 0.132057 -1.57 0 0</pose>
       <inertial>
         <pose frame=''>0 -0.118999 -0.059152 0 -0 0</pose>
         <mass>2.48477</mass>
@@ -121,7 +80,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/simple/elbow_link.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/simple/elbow_link.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -130,7 +89,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/simple/gripper_outer_assembly_simplified.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/simple/gripper_outer_assembly_simplified.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -139,7 +98,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/simple/fingerup_7_raised.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/simple/fingerup_7_raised.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -148,7 +107,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/simple/fingerup_7_raised.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/simple/fingerup_7_raised.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -157,7 +116,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/elbow_link.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/elbow_link.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -166,7 +125,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/gripper_outer_assembly_simplified.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/gripper_outer_assembly_simplified.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -175,7 +134,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/fingerup_7_raised.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/fingerup_7_raised.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -184,7 +143,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://ModularBot/database/modular/meshes/fingerup_7_raised.stl</uri>
+            <uri>model://ModularBot_1DOF/database/modular/meshes/fingerup_7_raised.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -210,11 +169,13 @@
     <static>0</static>
     <plugin name='xbot2_gz_joint_server' filename='libxbot2_gz_joint_server.so'>
       <pid>
-        <pid name='J1_A' profile='small_mot'/>
-        <pid name='gripper_A_finger_joint1' profile='small_mot'/>
-        <pid name='gripper_A_finger_joint2' profile='small_mot'/>
+        <pid name='J1_A' profile='medium_mot'/>
+        <pid name='gripper_A_finger_joint1' profile='medium_mot'/>
+        <pid name='gripper_A_finger_joint2' profile='medium_mot'/>
       </pid>
-      <gain d='5' name='small_mot' p='100'/>
+      <gain d='10' name='small_mot' p='100'/>
+      <gain d='50' name='medium_mot' p='500'/>
+      <gain d='100' name='big_mot' p='1000'/>
     </plugin>
   </model>
 </sdf>

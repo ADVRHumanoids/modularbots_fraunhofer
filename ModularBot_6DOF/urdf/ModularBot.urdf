@@ -4,9 +4,6 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="ModularBot_6DOF">
-  <!-- <xacro:include filename="$(find modular)/urdf/config.xacro" />
-    <xacro:include filename="$(find modular)/urdf/modular.gazebo" /> -->
-  <!-- <xacro:property name="pi" value="3.1415" /> -->
   <material name="blue">
     <color rgba="0 0 0.8 1"/>
   </material>
@@ -65,7 +62,6 @@
   </joint>
   <link name="J1_A_stator">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/yaw_base.stl" scale="0.001 0.001 0.001"/>
@@ -100,10 +96,8 @@
     <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.214"/>
     <limit effort="147" lower="-2.8" upper="2.8" velocity="3.9"/>
   </joint>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="L_1_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/yaw_link.stl" scale="0.001 0.001 0.001"/>
@@ -116,15 +110,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/simple/yaw_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.024438213"/>
       <mass value="0.42322395"/>
@@ -142,9 +127,6 @@
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0978986"/>
       <mass value="0.197124"/>
       <inertia ixx="0.00016128216" ixy="-2.4229e-07" ixz="3.771218e-06" iyy="0.00016138868" iyz="-2.4900687e-06" izz="0.1287638"/>
-      <!-- ixz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_xz'] }" -->
-      <!-- iyz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_yz'] }" -->
-      <!-- izz="${module['dynamics']['body_2_fast']['inertia_tensor']['I_zz'] }" -->
     </inertial>
   </link>
   <joint name="fixed_J2_A" type="fixed">
@@ -155,7 +137,6 @@
   </joint>
   <link name="J2_A_stator">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/elbow_base.stl" scale="0.001 0.001 0.001"/>
@@ -190,10 +171,8 @@
     <origin rpy="-1.57 -0.0 0.0" xyz="0.0 0.0721499771235 0.132057454972"/>
     <limit effort="147" lower="-2.0" upper="2.0" velocity="3.9"/>
   </joint>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="L_2_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 3.14 0.0" xyz="0.0 0.0 -0.072"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/elbow_link.stl" scale="0.001 0.001 0.001"/>
@@ -206,15 +185,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/simple/elbow_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 -0.040608854 -0.038467625"/>
       <mass value="1.1036463"/>
@@ -232,9 +202,6 @@
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0978986"/>
       <mass value="0.197124"/>
       <inertia ixx="0.00016128216" ixy="-2.4229e-07" ixz="3.771218e-06" iyy="0.00016138868" iyz="-2.4900687e-06" izz="0.1287638"/>
-      <!-- ixz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_xz'] }" -->
-      <!-- iyz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_yz'] }" -->
-      <!-- izz="${module['dynamics']['body_2_fast']['inertia_tensor']['I_zz'] }" -->
     </inertial>
   </link>
   <joint name="fixed_J3_A" type="fixed">
@@ -245,7 +212,6 @@
   </joint>
   <link name="J3_A_stator">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/yaw_base.stl" scale="0.001 0.001 0.001"/>
@@ -280,10 +246,8 @@
     <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.214"/>
     <limit effort="147" lower="-2.8" upper="2.8" velocity="3.9"/>
   </joint>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="L_3_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/yaw_link.stl" scale="0.001 0.001 0.001"/>
@@ -296,15 +260,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/simple/yaw_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.024438213"/>
       <mass value="0.42322395"/>
@@ -322,9 +277,6 @@
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0978986"/>
       <mass value="0.197124"/>
       <inertia ixx="0.00016128216" ixy="-2.4229e-07" ixz="3.771218e-06" iyy="0.00016138868" iyz="-2.4900687e-06" izz="0.1287638"/>
-      <!-- ixz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_xz'] }" -->
-      <!-- iyz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_yz'] }" -->
-      <!-- izz="${module['dynamics']['body_2_fast']['inertia_tensor']['I_zz'] }" -->
     </inertial>
   </link>
   <joint name="fixed_J4_A" type="fixed">
@@ -335,7 +287,6 @@
   </joint>
   <link name="J4_A_stator">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/elbow_base.stl" scale="0.001 0.001 0.001"/>
@@ -370,10 +321,8 @@
     <origin rpy="-1.57 -0.0 0.0" xyz="0.0 0.0721499771235 0.132057454972"/>
     <limit effort="147" lower="-2.0" upper="2.0" velocity="3.9"/>
   </joint>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="L_4_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 3.14 0.0" xyz="0.0 0.0 -0.072"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/elbow_link.stl" scale="0.001 0.001 0.001"/>
@@ -386,15 +335,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/simple/elbow_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 -0.040608854 -0.038467625"/>
       <mass value="1.1036463"/>
@@ -412,9 +352,6 @@
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0978986"/>
       <mass value="0.197124"/>
       <inertia ixx="0.00016128216" ixy="-2.4229e-07" ixz="3.771218e-06" iyy="0.00016138868" iyz="-2.4900687e-06" izz="0.1287638"/>
-      <!-- ixz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_xz'] }" -->
-      <!-- iyz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_yz'] }" -->
-      <!-- izz="${module['dynamics']['body_2_fast']['inertia_tensor']['I_zz'] }" -->
     </inertial>
   </link>
   <joint name="fixed_J5_A" type="fixed">
@@ -425,7 +362,6 @@
   </joint>
   <link name="J5_A_stator">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/yaw_base.stl" scale="0.001 0.001 0.001"/>
@@ -460,10 +396,8 @@
     <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.214"/>
     <limit effort="147" lower="-2.8" upper="2.8" velocity="3.9"/>
   </joint>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="L_5_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/yaw_link.stl" scale="0.001 0.001 0.001"/>
@@ -476,15 +410,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/simple/yaw_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.024438213"/>
       <mass value="0.42322395"/>
@@ -502,9 +427,6 @@
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0978986"/>
       <mass value="0.197124"/>
       <inertia ixx="0.00016128216" ixy="-2.4229e-07" ixz="3.771218e-06" iyy="0.00016138868" iyz="-2.4900687e-06" izz="0.1287638"/>
-      <!-- ixz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_xz'] }" -->
-      <!-- iyz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_yz'] }" -->
-      <!-- izz="${module['dynamics']['body_2_fast']['inertia_tensor']['I_zz'] }" -->
     </inertial>
   </link>
   <joint name="fixed_J6_A" type="fixed">
@@ -515,7 +437,6 @@
   </joint>
   <link name="J6_A_stator">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/elbow_base.stl" scale="0.001 0.001 0.001"/>
@@ -550,10 +471,8 @@
     <origin rpy="-1.57 -0.0 0.0" xyz="0.0 0.0721499771235 0.132057454972"/>
     <limit effort="147" lower="-2.0" upper="2.0" velocity="3.9"/>
   </joint>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="L_6_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 3.14 0.0" xyz="0.0 0.0 -0.072"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/elbow_link.stl" scale="0.001 0.001 0.001"/>
@@ -566,15 +485,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/simple/elbow_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 -0.040608854 -0.038467625"/>
       <mass value="1.1036463"/>
@@ -592,15 +502,10 @@
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0978986"/>
       <mass value="0.197124"/>
       <inertia ixx="0.00016128216" ixy="-2.4229e-07" ixz="3.771218e-06" iyy="0.00016138868" iyz="-2.4900687e-06" izz="0.1287638"/>
-      <!-- ixz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_xz'] }" -->
-      <!-- iyz="${ gear_ratio * module['dynamics']['body_2_fast']['inertia_tensor']['I_yz'] }" -->
-      <!-- izz="${module['dynamics']['body_2_fast']['inertia_tensor']['I_zz'] }" -->
     </inertial>
   </link>
-  <!-- <xacro:property name="visual" value="${module['visual']['mesh_body_1']}"/> -->
   <link name="tool_exchanger_A">
     <visual>
-      <!-- Load mesh. Rotate the origin frame (this is because of how the .stl was saved) -->
       <origin rpy="0.0 0.0 3.14" xyz="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/tool_exchanger.stl" scale="0.001 0.001 0.001"/>
@@ -613,15 +518,6 @@
         <mesh filename="package://ModularBot_6DOF/database/modular/meshes/tool_exchanger.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!--inertial parameters for ORANGE rotating part. wrt a point on one end of the rod-->
-    <!-- <inertial>
-                <origin xyz="0 0 -0.002265" rpy="0 0 0"/>
-                <mass value="0.153466"/>
-                <inertia
-                        ixx="0.000034763" ixy="0.0" ixz="0.0"
-                        iyy="0.000034827" iyz="0.0"
-                        izz="0.000031822"/>
-            </inertial> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.007 0.0 0.044"/>
       <mass value="1.305"/>

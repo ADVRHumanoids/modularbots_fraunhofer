@@ -1,6 +1,6 @@
 <launch>
     <arg name="gui" default="true" />
-    <arg name="pkg_name"  default="ModularBot"/>
+    <arg name="pkg_name"  default="ModularBot_1DOF"/>
     <param name="robot_description" textfile="$(eval find(pkg_name) + '/urdf/ModularBot.urdf')"/>
     <param name="robot_description_semantic" textfile="$(eval find(pkg_name) + '/srdf/ModularBot.srdf')"/>
     

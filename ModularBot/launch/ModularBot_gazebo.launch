@@ -5,7 +5,7 @@
   
   
   <!-- gazebo configuration parameters -->
-  <arg name="paused" default="true"/>
+  <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
@@ -27,16 +27,15 @@
   <arg     if="$(arg debug)" name="script_type" value="debug"/>
 
   
-  <!-- from where the simulation enviornment will be loaded:
-       WARNING: exactly one parameter has to be true, otherwise simulation behaviour is undefined -->
-  <arg name="world_name" default="$(find ModularBot)/database/ModularBot_fixed_base/ModularBot_world.sdf"/>
+  <!-- from where the simulation enviornment will be loaded -->
+  <arg name="world_name" default="$(find ModularBot_1DOF)/database/ModularBot_1DOF_fixed_base/ModularBot_1DOF_world.sdf"/>
 
 
   <!-- Load the URDF/SRDF into the ROS Parameter Server -->
   <param name="robot_description"
-         command="$(find xacro)/xacro --inorder '$(find ModularBot)/urdf/ModularBot.urdf'"/>
+         command="$(find xacro)/xacro --inorder '$(find ModularBot_1DOF)/urdf/ModularBot.urdf'"/>
 
-  <param name="robot_semantic_description" textfile="$(find ModularBot)/srdf/ModularBot.srdf"/>
+  <param name="robot_semantic_description" textfile="$(find ModularBot_1DOF)/srdf/ModularBot.srdf"/>
 
   
   <!-- run gazebo -->
