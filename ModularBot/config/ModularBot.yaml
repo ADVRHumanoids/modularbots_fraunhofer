@@ -15,10 +15,7 @@ ModelInterface:
 xbotcore_device_configs:
     sim: $(rospack find ModularBot)/config/hal/ModularBot_gz.yaml
     dummy: $(rospack find ModularBot)/config/hal/ModularBot_dummy.yaml
-    ec_imp: $(rospack find ModularBot)/config/hal/ModularBot_ec_all.yaml
-    
-    # ec: $(rospack find ModularBot)/config/hal/ModularBot_ec_all.yaml
-    # ec_hybr: $(rospack find ModularBot)/config/hal/ModularBot_ec_all.yaml
+    ec_imp: $(rospack find ModularBot)/config/hal/ModularBot_ec_all.yaml 
     ec_idle: $(rospack find ModularBot)/config/hal/ModularBot_ec_all.yaml
 
 # define threads to be created
@@ -34,19 +31,10 @@ xbotcore_plugins:
   # inside a thread with `other` priority
   ros_io: { thread: nrt_main, type: ros_io }
   ros_ctrl: { thread: nrt_main, type: ros_control }
-  ec_ros: { thread: nrt_main, type: ec_ros }
 
-  # notice that you can reuse the same plugin, by providing
-  # different names and possibly different parameters
-  homing:
-    thread: rt_main
-    type: homing_example
-    params:
-      time: { value: 5, type: double }
-
-# additional parameters that don't relate to any plugin
+  # additional parameters that don't relate to any plugin
 xbotcore_param:
-  /jm/tx_filter_autostart: { value: false, type: bool } # autostart joint filter
+  /jm/tx_filter_autostart: { value: true, type: bool } # autostart joint filter
   /jm/tx_filter_cutoff: { value: 2.0, type: double } # set default filter bandwidth
   /xbot_internal/ros_io/call_timeout: { value: 1.0, type: chrono }
   /rt_slow/memory_hooks: { value: false, type: bool }

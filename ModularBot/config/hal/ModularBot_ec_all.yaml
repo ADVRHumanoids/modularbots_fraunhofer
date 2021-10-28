@@ -19,24 +19,6 @@ xbotcore_devices:
                 type: vector<int>
                 value:
                     - '89'
-    albero_gripper:
-        names: []
-        thread: rt_main
-        params:
-            joint_id_map: *id001
-    
-    imu_ec:
-        names: []
-        thread: rt_main
-        params:
-            robot_name: *id002
-            joint_id_map: *id001
-    pow_ec:
-        names: []
-        thread: rt_main
-        params:
-            robot_name: *id002
-            joint_id_map: *id001
     joint_master:
         master: true
         thread: rt_main

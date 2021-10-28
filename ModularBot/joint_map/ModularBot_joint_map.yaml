@@ -5,6 +5,6 @@ albero_gripper_map:
       - gripper_A_leftfinger
     name: gripper_A
 joint_map: 
-  13: J1_A
+  100: J1_A
   201: HUB_201
 
