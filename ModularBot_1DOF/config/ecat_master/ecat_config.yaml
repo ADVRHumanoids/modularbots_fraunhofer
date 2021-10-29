@@ -77,7 +77,7 @@ CentAcESC_X: &CentAcESC_X
   aux_pdo : # names defined in SDO index 0x8002 
      _rd :  [ pos_ref_fb ]
      _rd :  [ pos_ref_fb, motor_enc_warn, motor_enc_err, link_enc_warn, link_enc_err ]
-     rd :  [ iq_out_fb ]
+     _rd :  [ iq_out_fb ]
      _wr :  [ iq_ref ]
      _wrd : [ "iq_offset&&iq_out_fb" ]
      _wrd : [ "ts&&rtt" ]
