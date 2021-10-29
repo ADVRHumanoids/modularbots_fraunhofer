@@ -1,13 +1,13 @@
 ## XBotInterface related configs
 
 XBotInterface:
-  urdf_path: "$(rospack find ModularBot_1DOF)/urdf/ModularBot.urdf"
-  srdf_path: "$(rospack find ModularBot_1DOF)/srdf/ModularBot.srdf"
-  joint_map_path: "$(rospack find ModularBot_1DOF)/joint_map/ModularBot_joint_map.yaml"
+  urdf_path: $(rospack find ModularBot_1DOF)/urdf/ModularBot.urdf
+  srdf_path: $(rospack find ModularBot_1DOF)/srdf/ModularBot.srdf
+  joint_map_path: $(rospack find ModularBot_1DOF)/joint_map/ModularBot_joint_map.yaml
 
 ModelInterface:
-  model_type: "RBDL"
-  is_model_floating_base: "false"
+  model_type: RBDL
+  is_model_floating_base: false
 
 ## XBot2 related configuration
 
@@ -32,6 +32,9 @@ xbotcore_plugins:
   ros_io: { thread: nrt_main, type: ros_io }
   ros_ctrl: { thread: nrt_main, type: ros_control }
   ec_ros: { thread: nrt_main, type: ec_ros }
+
+  # rt-safe homing plugin
+  homing: {thread: rt_main, type: homing_example}
 
   # additional parameters that don't relate to any plugin
 xbotcore_param:
