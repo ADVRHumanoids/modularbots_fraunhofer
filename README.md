@@ -11,6 +11,7 @@ Given a particular configuration of choice (say `ModularBot_6DOF`), the simulati
 
 ## Running the hardware
 On the real robot, the following steps must be followed:
+  - release the emergency stop and wait 5 seconds.
   - [terminal #1] run the EtherCat master (starts the boards)
     - `ecat_master` 
     - wait for it to stop printing
