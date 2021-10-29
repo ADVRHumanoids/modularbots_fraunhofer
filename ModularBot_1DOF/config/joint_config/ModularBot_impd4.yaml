@@ -4,8 +4,8 @@ J1_A:
     control_mode: D4_impedance_ctrl
     pid:
         impedance:
-            - 500.0
-            - 20.0
+            - 100.0
+            - 5.0
             - 1.0
             - 0.025
             - 0.99
