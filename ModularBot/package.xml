@@ -1,0 +1,13 @@
+<package>
+
+  <name>ModularBot</name>
+  <version>1.0.0</version>
+  <description>
+  Modular robots meshes
+  </description>
+  <maintainer email="edoardo.romiti@iit.it">Edoardo Romiti</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
