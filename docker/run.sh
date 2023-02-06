@@ -12,6 +12,6 @@ nvidia-docker run --rm -it \
  --publish 8888:8888 \
  --volume $(pwd)/docker/setup_catkin_ws.sh:/home/user/setup_catkin_ws.sh \
  --volume $(pwd)/$PKG_NAME:/home/user/catkin_ws/src/$PKG_NAME \
- arturolaurenzi/xbot2_focal_base_nvidia:latest \
+ arturolaurenzi/xbot2:examples \
  bash -c "./setup_catkin_ws.sh; bash"
 
