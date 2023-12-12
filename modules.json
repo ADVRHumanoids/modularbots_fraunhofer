@@ -1,0 +1,1382 @@
+{
+  "modules": [
+    {
+      "header": {
+        "ID": "B0",
+        "name": "Omnidirectional Base (proxy)",
+        "date": "2023-11-14",
+        "author": [
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "base2world_proxy",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "base",
+              "size": []
+            }
+          ]
+        },
+        {
+          "ID": "between_joints_first_proxy",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": []
+        },
+        {
+          "ID": "between_joints_second_proxy",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": []
+        },
+        {
+          "ID": "robot_chassis_link_0",
+          "mass": 100.0,
+          "inertia": [
+            [ 4.253301249999998, -5.551115123125783e-17, 0.04821529999999985 ],
+            [ -5.551115123125783e-17, 8.887122005733334, -1.1102230246251565e-16 ],
+            [ 0.04821529999999985, -1.1102230246251565e-16, 10.890271589066668 ]
+          ],
+          "r_com": [ 0.00488400000000002, 1.734723475976807e-18, 0.24408333333333337 ],
+          "connectors": [
+            {
+              "ID": "distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.123 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.8395 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            }
+          ],
+          "visual": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.368 ],
+                [ 0.0, 0.0, -1.0, -0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ -1.0, -0.0, 0.0, -0.368 ],
+                [ 0.0, -1.0, 0.0, -0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.368 ],
+                [ 0.0, 0.0, -1.0, 0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.368 ],
+                [ 0.0, 1.0, 0.0, 0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.368 ],
+                [ 0.0, 0.0, -1.0, -0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ -1.0, -0.0, 0.0, 0.368 ],
+                [ 0.0, -1.0, 0.0, -0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.368 ],
+                [ 0.0, 0.0, -1.0, 0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.368 ],
+                [ 0.0, 1.0, 0.0, 0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/shrp0_221025aa_description/meshes/part01-color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ -1.0, 4e-10, 0.0, -0.012 ],
+                [ -4e-10, -1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.5525 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_leds.stl",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.012 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.39 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_contactors.stl",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.5115 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.38015 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_battery.stl",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.01752 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.2875 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_chassis_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.012 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.2875 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_logos.stl",
+                "scale": [ 1.001, 1.076, 1.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.027 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.1165,
+                "z": 0.1165
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.368 ],
+                [ 0.0, 0.0, -1.0, -0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ -1.0, -0.0, 0.0, -0.368 ],
+                [ 0.0, -1.0, 0.0, -0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.1165,
+                "z": 0.1165
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.368 ],
+                [ 0.0, 0.0, -1.0, 0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.368 ],
+                [ 0.0, 1.0, 0.0, 0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.1165,
+                "z": 0.1165
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.368 ],
+                [ 0.0, 0.0, -1.0, -0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ -1.0, -0.0, 0.0, 0.368 ],
+                [ 0.0, -1.0, 0.0, -0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.1165,
+                "z": 0.1165
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.368 ],
+                [ 0.0, 0.0, -1.0, 0.235 ],
+                [ 0.0, 1.0, 0.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.368 ],
+                [ 0.0, 1.0, 0.0, 0.235 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "sphere",
+              "parameters": {
+                "r": 0.0
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.012 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.5525 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "sphere",
+              "parameters": {
+                "r": 0.0
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.012 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.39 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "sphere",
+              "parameters": {
+                "r": 0.0
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.5115 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.38015 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_battery.stl",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.01752 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.2875 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_chassis_color.dae",
+                "scale": [ 1.0, 1.0, 1.0 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.012 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.2875 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            },
+            {
+              "type": "sphere",
+              "parameters": {
+                "r": 0.0
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, -0.012 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.11 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "ID": "omni_rot",
+          "parent": "between_joints_second_proxy",
+          "child": "robot_chassis_link_0",
+          "type": "revolute",
+          "passive": false,
+          "poseParent": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "poseChild": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "limits": {
+            "positionLower": -Infinity,
+            "positionUpper": Infinity,
+            "peakTorque": Infinity,
+            "velocity": 0.5,
+            "acceleration": 0.5
+          },
+          "gearRatio": 1.0,
+          "motorInertia": 0.0,
+          "frictionCoulomb": 0.0,
+          "frictionViscous": 0.0
+        },
+        {
+          "ID": "omni_x",
+          "parent": "base2world_proxy",
+          "child": "between_joints_first_proxy",
+          "type": "prismatic",
+          "passive": false,
+          "poseParent": [
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ -1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "poseChild": [
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "limits": {
+            "positionLower": -Infinity,
+            "positionUpper": Infinity,
+            "peakTorque": Infinity,
+            "velocity": 1.7,
+            "acceleration": 1.5
+          },
+          "gearRatio": 1.0,
+          "motorInertia": 0.0,
+          "frictionCoulomb": 0.0,
+          "frictionViscous": 0.0
+        },
+        {
+          "ID": "omni_y",
+          "parent": "between_joints_first_proxy",
+          "child": "between_joints_second_proxy",
+          "type": "prismatic",
+          "passive": false,
+          "poseParent": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, -1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "poseChild": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "limits": {
+            "positionLower": -Infinity,
+            "positionUpper": Infinity,
+            "peakTorque": Infinity,
+            "velocity": 1.7,
+            "acceleration": 1.5
+          },
+          "gearRatio": 1.0,
+          "motorInertia": 0.0,
+          "frictionCoulomb": 0.0,
+          "frictionViscous": 0.0
+        }
+      ]
+    },
+    {
+      "header": {
+        "ID": "elbow_joint",
+        "name": "elbow_joint",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "J1_A_stator_0",
+          "mass": 1.8637994,
+          "inertia": [
+            [ 0.00807728995587721, 6.8780537e-06, 2.4976943e-05 ],
+            [ 6.8780537e-06, 0.006983318687100291, 0.00033289421424550716 ],
+            [ 2.4976943e-05, 0.00033289421424550716, 0.003786786168776921 ]
+          ],
+          "r_com": [ 0.0, -0.01365901248073854, 0.09585329841352401 ],
+          "connectors": [
+            {
+              "ID": "proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "visual": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_base.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_base.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        },
+        {
+          "ID": "L_1_A_0",
+          "mass": 1.3007703000000002,
+          "inertia": [
+            [ 0.005852158888296249, 6.5396659e-06, 1.0503049999999994e-07 ],
+            [ 6.5396659e-06, 0.003166041242136038, -0.0006473132530885725 ],
+            [ 1.0503049999999994e-07, -0.0006473132530885725, 0.13401480266616017 ]
+          ],
+          "r_com": [ 0.0, -0.034454823779679004, -0.047474035675197604 ],
+          "connectors": [
+            {
+              "ID": "distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, -0.132057455 ],
+                [ 0.0, 1.0, 0.0, -0.0721499771 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            }
+          ],
+          "visual": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_link.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ -0.9999987317, 0.0, 0.0015926529, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ -0.0015926529, 0.0, -0.9999987317, -0.072 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_link.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ -0.9999987317, 0.0, 0.0015926529, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ -0.0015926529, 0.0, -0.9999987317, -0.072 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "ID": "J1_A",
+          "parent": "J1_A_stator_0",
+          "child": "L_1_A_0",
+          "type": "revolute",
+          "passive": false,
+          "poseParent": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0007963267, 0.9999996829, 0.0721499771 ],
+            [ 0.0, -0.9999996829, 0.0007963267, 0.132057455 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "poseChild": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "limits": {
+            "positionLower": -2.0,
+            "positionUpper": 2.0,
+            "peakTorque": 147.0,
+            "velocity": 3.9,
+            "acceleration": Infinity
+          },
+          "gearRatio": 1.0,
+          "motorInertia": 0.0,
+          "frictionCoulomb": 0.0,
+          "frictionViscous": 0.0
+        }
+      ]
+    },
+    {
+      "header": {
+        "ID": "passive_link_l_135",
+        "name": "passive_link_l_135",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "passive_link_l_135",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "l_135_distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -0.7071067812, 0.7071067812, 0.1365685425 ],
+                [ 0.0, -0.7071067812, -0.7071067812, 0.0565685425 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            },
+            {
+              "ID": "l_135_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_135.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 0.9975640503, 0.0697564737, 0.0, 0.0 ],
+                [ -0.0697564737, 0.9975640503, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "passive_link_l_45",
+        "name": "passive_link_l_45",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "passive_link_l_45",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "l_45_distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 0.7071067812, 0.7071067812, 0.0234314575 ],
+                [ 0.0, -0.7071067812, 0.7071067812, 0.0565685425 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            },
+            {
+              "ID": "l_45_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_45.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "passive_link_l_90",
+        "name": "passive_link_l_90",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "passive_link_l_90",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "l_90_distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.08 ],
+                [ 0.0, -1.0, 0.0, 0.08 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            },
+            {
+              "ID": "l_90_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_90.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "passive_link_straight_140",
+        "name": "passive_link_straight_140",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "passive_link_straight_140",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "straight_140_distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.14 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            },
+            {
+              "ID": "straight_140_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_straight_140.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "passive_link_straight_350",
+        "name": "passive_link_straight_350",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "passive_link_straight_350",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "straight_350_distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.35 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            },
+            {
+              "ID": "straight_350_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_straight_350.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "passive_link_straight_70",
+        "name": "passive_link_straight_70",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "passive_link_straight_70",
+          "mass": 0.0,
+          "inertia": [
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 0.0 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.0 ],
+          "connectors": [
+            {
+              "ID": "straight_70_distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.07 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            },
+            {
+              "ID": "straight_70_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_straight_70.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "straight_joint",
+        "name": "straight_joint",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "J1_A_stator_0",
+          "mass": 2.0564934,
+          "inertia": [
+            [ 0.010700811259057098, -1.14168e-05, 2.71689e-06 ],
+            [ -1.14168e-05, 0.010597168259057098, 8.76312e-05 ],
+            [ 2.71689e-06, 8.76312e-05, 0.0032036258 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.10609327549445383 ],
+          "connectors": [
+            {
+              "ID": "proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "visual": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_base.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_base.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        },
+        {
+          "ID": "L_1_A_0",
+          "mass": 0.62034795,
+          "inertia": [
+            [ 0.0015244832047166712, 1.1661133999999999e-05, 4.44352172e-06 ],
+            [ 1.1661133999999999e-05, 0.0015293181347166586, 1.9540661300000002e-05 ],
+            [ 4.44352172e-06, 1.9540661300000002e-05, 0.12977347399999997 ]
+          ],
+          "r_com": [ 0.0, 0.0, -0.047781250285749075 ],
+          "connectors": [
+            {
+              "ID": "distal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": []
+            }
+          ],
+          "visual": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_link.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_link.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "ID": "J1_A",
+          "parent": "J1_A_stator_0",
+          "child": "L_1_A_0",
+          "type": "revolute",
+          "passive": false,
+          "poseParent": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.214 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "poseChild": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "limits": {
+            "positionLower": -2.8,
+            "positionUpper": 2.8,
+            "peakTorque": 147.0,
+            "velocity": 3.9,
+            "acceleration": Infinity
+          },
+          "gearRatio": 1.0,
+          "motorInertia": 0.0,
+          "frictionCoulomb": 0.0,
+          "frictionViscous": 0.0
+        }
+      ]
+    },
+    {
+      "header": {
+        "ID": "tool_exchanger",
+        "name": "Tool Exchanger",
+        "date": "2023-11-14",
+        "author": [
+          "IIT",
+          "FhI",
+          "Jonathan K\u00fclz"
+        ],
+        "email": [
+          ""
+        ],
+        "affiliation": [
+          ""
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "tool_exchanger",
+          "mass": 1.305,
+          "inertia": [
+            [ 0.0018769887, 0.0, 0.0 ],
+            [ 0.0, 0.0022629779, 0.0 ],
+            [ 0.0, 0.0, 0.001888755 ]
+          ],
+          "r_com": [ -0.007, 0.0, 0.044 ],
+          "connectors": [
+            {
+              "ID": "eef",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.222 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "eef",
+              "size": []
+            },
+            {
+              "ID": "eef_proximal",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": []
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "modularbots_fraunhofer/ModularBot_6DOF/database/modular/meshes/tool_exchanger.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    }
+  ]
+}
