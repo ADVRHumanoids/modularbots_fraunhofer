@@ -1,0 +1,161 @@
+{
+  "header": {
+    "ID": "elbow_joint",
+    "name": "elbow_joint",
+    "date": "2023-11-14",
+    "author": [
+      "IIT",
+      "FhI",
+      "Jonathan K\u00fclz"
+    ],
+    "email": [
+      ""
+    ],
+    "affiliation": [
+      ""
+    ],
+    "cost": 0.0
+  },
+  "bodies": [
+    {
+      "ID": "J1_A_stator_0",
+      "mass": 1.8637994,
+      "inertia": [
+        [ 0.00807728995587721, 6.8780537e-06, 2.4976943e-05 ],
+        [ 6.8780537e-06, 0.006983318687100291, 0.00033289421424550716 ],
+        [ 2.4976943e-05, 0.00033289421424550716, 0.003786786168776921 ]
+      ],
+      "r_com": [ 0.0, -0.01365901248073854, 0.09585329841352401 ],
+      "connectors": [
+        {
+          "ID": "proximal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, -1.0, -0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "f",
+          "type": "",
+          "size": 1
+        }
+      ],
+      "visual": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_base.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ],
+      "collision": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_base.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    },
+    {
+      "ID": "L_1_A_0",
+      "mass": 1.3007703000000002,
+      "inertia": [
+        [ 0.005852158888296249, 6.5396659e-06, 1.0503049999999994e-07 ],
+        [ 6.5396659e-06, 0.003166041242136038, -0.0006473132530885725 ],
+        [ 1.0503049999999994e-07, -0.0006473132530885725, 0.13401480266616017 ]
+      ],
+      "r_com": [ 0.0, -0.034454823779679004, -0.047474035675197604 ],
+      "connectors": [
+        {
+          "ID": "distal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, -0.132057455 ],
+            [ 0.0, 1.0, 0.0, -0.0721499771 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "m",
+          "type": "",
+          "size": 1
+        }
+      ],
+      "visual": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_link.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ -0.9999987317, 0.0, 0.0015926529, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ -0.0015926529, 0.0, -0.9999987317, -0.072 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ],
+      "collision": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/elbow_link.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ -0.9999987317, 0.0, 0.0015926529, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ -0.0015926529, 0.0, -0.9999987317, -0.072 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "ID": "J1_A",
+      "parent": "J1_A_stator_0",
+      "child": "L_1_A_0",
+      "type": "revolute",
+      "passive": false,
+      "poseParent": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0007963267, 0.9999996829, 0.0721499771 ],
+        [ 0.0, -0.9999996829, 0.0007963267, 0.132057455 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "poseChild": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 1.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "limits": {
+        "positionLower": -2.0,
+        "positionUpper": 2.0,
+        "peakTorque": 147.0,
+        "velocity": 3.9,
+        "acceleration": Infinity
+      },
+      "gearRatio": 1.0,
+      "motorInertia": 0.0,
+      "frictionCoulomb": 0.0,
+      "frictionViscous": 0.0
+    }
+  ]
+}

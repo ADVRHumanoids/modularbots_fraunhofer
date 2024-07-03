@@ -1,0 +1,73 @@
+{
+  "header": {
+    "ID": "passive_link_l_45",
+    "name": "passive_link_l_45",
+    "date": "2023-11-14",
+    "author": [
+      "IIT",
+      "FhI",
+      "Jonathan K\u00fclz"
+    ],
+    "email": [
+      ""
+    ],
+    "affiliation": [
+      ""
+    ],
+    "cost": 0.0
+  },
+  "bodies": [
+    {
+      "ID": "passive_link_l_45",
+      "mass": 0.0,
+      "inertia": [
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "r_com": [ 0.0, 0.0, 0.0 ],
+      "connectors": [
+        {
+          "ID": "l_45_distal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.7071067812, 0.7071067812, 0.0234314575 ],
+            [ 0.0, -0.7071067812, 0.7071067812, 0.0565685425 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "m",
+          "type": "",
+          "size": 1
+        },
+        {
+          "ID": "l_45_proximal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, -1.0, -0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "f",
+          "type": "",
+          "size": 1
+        }
+      ],
+      "collision": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_45.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    }
+  ],
+  "joints": []
+}

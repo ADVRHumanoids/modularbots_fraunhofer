@@ -1,0 +1,80 @@
+{
+  "header": {
+    "ID": "flange",
+    "name": "flange.json",
+    "date": "2023-11-20",
+    "author": "MarcoMagri",
+    "email": "marco.magri@fraunhofer.it",
+    "affiliation": "Fraunhofer Italia",
+    "cost": 0.0
+  },
+  "bodies": [
+    {
+      "ID": "401_link",
+      "mass": 0.365,
+      "inertia": [
+        [ 0.000323135, 0.0, 0.0 ],
+        [ 0.0, 0.000323135, 0.0 ],
+        [ 0.0, 0.0, 0.000476943 ]
+      ],
+      "r_com": [ 0.0, 0.0, 0.035 ],
+      "connectors": [
+        {
+          "ID": "401_connector_1",
+          "pose": [
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "f",
+          "type": "",
+          "size": 1
+        },
+        {
+          "ID": "401_connector_2",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0555 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "m",
+          "type": "eef_flange",
+          "size": 1
+        }
+      ],
+      "visual": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "fhi_resources/models/modular/meshes/flange.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ],
+      "collision": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "fhi_resources/models/modular/meshes/flange.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    }
+  ],
+  "joints": []
+}

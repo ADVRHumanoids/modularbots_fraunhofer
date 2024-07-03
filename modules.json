@@ -2,6 +2,264 @@
   "modules": [
     {
       "header": {
+        "ID": "4320",
+        "name": "module_link_straight_100_fraunhofer.json",
+        "date": "2024-04-29",
+        "author": [
+          "EdoardoRomiti"
+        ],
+        "email": [
+          "edoardo.romiti@iit.it"
+        ],
+        "affiliation": [
+          "IIT"
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "4320_link",
+          "mass": 0.89268518,
+          "inertia": [
+            [ 0.0020334531, -3.1356498e-06, -3.3192221e-07 ],
+            [ -3.1356498e-06, 0.0020464712, -2.6168746e-07 ],
+            [ -3.3192221e-07, -2.6168746e-07, 0.0017627684 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.044 ],
+          "connectors": [
+            {
+              "ID": "4320_connector_1",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": [ 1 ]
+            },
+            {
+              "ID": "4320_connector_2",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.1 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": [ 1 ]
+            }
+          ],
+          "visual": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.055,
+                "z": 0.1
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.044 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.055,
+                "z": 0.1
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.044 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "4420",
+        "name": "module_link_straight_200_fraunhofer.json",
+        "date": "2024-04-29",
+        "author": [
+          "EdoordoRomiti"
+        ],
+        "email": [
+          "edoardo.romiti@iit.it"
+        ],
+        "affiliation": [
+          "IIT"
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "4420_link",
+          "mass": 1.102,
+          "inertia": [
+            [ 0.0074651361, 3.1355726e-06, -6.5578466e-07 ],
+            [ 3.1355726e-06, 0.0074781542, -5.6379122e-07 ],
+            [ -6.5578466e-07, -5.6379122e-07, 0.0022984636 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.093 ],
+          "connectors": [
+            {
+              "ID": "4420_connector_1",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": [ 1 ]
+            },
+            {
+              "ID": "4420_connector_2",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.2 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": [ 1 ]
+            }
+          ],
+          "visual": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.055,
+                "z": 0.2
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.094 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.055,
+                "z": 0.2
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.094 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
+        "ID": "4520",
+        "name": "module_link_straight_500_fraunhofer.json",
+        "date": "2024-04-29",
+        "author": [
+          "EdoardoRomiti"
+        ],
+        "email": [
+          "edoardo.romiti@iit.it"
+        ],
+        "affiliation": [
+          "IIT"
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "4520_link",
+          "mass": 1.6377171,
+          "inertia": [
+            [ 0.15464024, -3.1348037e-06, -3.1136436e-06 ],
+            [ -3.1348037e-06, 0.15465326, 0.0 ],
+            [ -3.1136436e-06, 0.0, 0.0039667989 ]
+          ],
+          "r_com": [ 0.0, 0.0, 0.241 ],
+          "connectors": [
+            {
+              "ID": "4520_connector_1",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "",
+              "size": [ 1 ]
+            },
+            {
+              "ID": "4520_connector_2",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.5 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "",
+              "size": [ 1 ]
+            }
+          ],
+          "visual": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.055,
+                "z": 0.5
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.244 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "cylinder",
+              "parameters": {
+                "r": 0.055,
+                "z": 0.5
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.244 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
         "ID": "B0",
         "name": "Omnidirectional Base (proxy)",
         "date": "2023-11-14",
@@ -37,7 +295,7 @@
               ],
               "gender": "f",
               "type": "base",
-              "size": []
+              "size": [ 1 ]
             }
           ]
         },
@@ -83,7 +341,7 @@
               ],
               "gender": "m",
               "type": "",
-              "size": []
+              "size": [ 1 ]
             }
           ],
           "visual": [
@@ -499,6 +757,92 @@
     },
     {
       "header": {
+        "ID": "driller",
+        "name": "driller.json",
+        "date": "2023-11-20",
+        "author": [
+          "MarcoMagri"
+        ],
+        "email": [
+          "marco.magri@fraunhofer.it"
+        ],
+        "affiliation": [
+          "Fraunhofer Italia"
+        ],
+        "cost": 0.0
+      },
+      "bodies": [
+        {
+          "ID": "402_link",
+          "mass": 2.45,
+          "inertia": [
+            [ 0.002841593, 6.267e-05, -0.000356033 ],
+            [ 6.267e-05, 0.004228581, 0.000156839 ],
+            [ -0.000356033, 0.000156839, 0.004582788 ]
+          ],
+          "r_com": [ -0.01, 0.01, 0.055 ],
+          "connectors": [
+            {
+              "ID": "402_connector_1",
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, -1.0, -0.0, 0.0 ],
+                [ 0.0, 0.0, -1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "f",
+              "type": "eef_flange",
+              "size": [ 1 ]
+            },
+            {
+              "ID": "402_connector_2",
+              "pose": [
+                [ 0.19134046, -0.6611963, -0.72540216, 0.15558 ],
+                [ -0.17896391, 0.70316648, -0.6881343, 0.13015 ],
+                [ 0.96507033, 0.26148874, 0.01621392, 0.04808 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ],
+              "gender": "m",
+              "type": "eef",
+              "size": [ 1 ]
+            }
+          ],
+          "visual": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "fhi_resources/models/modular/meshes/driller.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "type": "mesh",
+              "parameters": {
+                "file": "fhi_resources/models/modular/meshes/simple/driller.stl",
+                "scale": [ 0.001, 0.001, 0.001 ]
+              },
+              "pose": [
+                [ 1.0, 0.0, 0.0, 0.0 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0 ],
+                [ 0.0, 0.0, 0.0, 1.0 ]
+              ]
+            }
+          ]
+        }
+      ],
+      "joints": []
+    },
+    {
+      "header": {
         "ID": "elbow_joint",
         "name": "elbow_joint",
         "date": "2023-11-14",
@@ -536,7 +880,7 @@
               ],
               "gender": "f",
               "type": "",
-              "size": []
+              "size": [ 1 ]
             }
           ],
           "visual": [
@@ -590,7 +934,7 @@
               ],
               "gender": "m",
               "type": "",
-              "size": []
+              "size": [ 1 ]
             }
           ],
           "visual": [
@@ -660,136 +1004,61 @@
     },
     {
       "header": {
-        "ID": "passive_link_l_135",
-        "name": "passive_link_l_135",
-        "date": "2023-11-14",
+        "ID": "flange",
+        "name": "flange.json",
+        "date": "2023-11-20",
         "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
+          "MarcoMagri"
         ],
         "email": [
-          ""
+          "marco.magri@fraunhofer.it"
         ],
         "affiliation": [
-          ""
+          "Fraunhofer Italia"
         ],
         "cost": 0.0
       },
       "bodies": [
         {
-          "ID": "passive_link_l_135",
-          "mass": 0.0,
+          "ID": "401_link",
+          "mass": 0.365,
           "inertia": [
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ]
+            [ 0.000323135, 0.0, 0.0 ],
+            [ 0.0, 0.000323135, 0.0 ],
+            [ 0.0, 0.0, 0.000476943 ]
           ],
-          "r_com": [ 0.0, 0.0, 0.0 ],
+          "r_com": [ 0.0, 0.0, 0.035 ],
           "connectors": [
             {
-              "ID": "l_135_distal",
+              "ID": "401_connector_1",
               "pose": [
+                [ 0.0, 1.0, 0.0, 0.0 ],
                 [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -0.7071067812, 0.7071067812, 0.1365685425 ],
-                [ 0.0, -0.7071067812, -0.7071067812, 0.0565685425 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "m",
-              "type": "",
-              "size": []
-            },
-            {
-              "ID": "l_135_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
                 [ 0.0, 0.0, -1.0, 0.0 ],
                 [ 0.0, 0.0, 0.0, 1.0 ]
               ],
               "gender": "f",
               "type": "",
-              "size": []
-            }
-          ],
-          "collision": [
+              "size": [ 1 ]
+            },
             {
-              "type": "mesh",
-              "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_135.stl",
-                "scale": [ 0.001, 0.001, 0.001 ]
-              },
-              "pose": [
-                [ 0.9975640503, 0.0697564737, 0.0, 0.0 ],
-                [ -0.0697564737, 0.9975640503, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ]
-            }
-          ]
-        }
-      ],
-      "joints": []
-    },
-    {
-      "header": {
-        "ID": "passive_link_l_45",
-        "name": "passive_link_l_45",
-        "date": "2023-11-14",
-        "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
-        ],
-        "email": [
-          ""
-        ],
-        "affiliation": [
-          ""
-        ],
-        "cost": 0.0
-      },
-      "bodies": [
-        {
-          "ID": "passive_link_l_45",
-          "mass": 0.0,
-          "inertia": [
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ]
-          ],
-          "r_com": [ 0.0, 0.0, 0.0 ],
-          "connectors": [
-            {
-              "ID": "l_45_distal",
+              "ID": "401_connector_2",
               "pose": [
                 [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 0.7071067812, 0.7071067812, 0.0234314575 ],
-                [ 0.0, -0.7071067812, 0.7071067812, 0.0565685425 ],
+                [ 0.0, 1.0, 0.0, 0.0 ],
+                [ 0.0, 0.0, 1.0, 0.0555 ],
                 [ 0.0, 0.0, 0.0, 1.0 ]
               ],
               "gender": "m",
-              "type": "",
-              "size": []
-            },
-            {
-              "ID": "l_45_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
-                [ 0.0, 0.0, -1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "f",
-              "type": "",
-              "size": []
+              "type": "eef_flange",
+              "size": [ 1 ]
             }
           ],
-          "collision": [
+          "visual": [
             {
               "type": "mesh",
               "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_45.stl",
+                "file": "fhi_resources/models/modular/meshes/flange.stl",
                 "scale": [ 0.001, 0.001, 0.001 ]
               },
               "pose": [
@@ -799,289 +1068,12 @@
                 [ 0.0, 0.0, 0.0, 1.0 ]
               ]
             }
-          ]
-        }
-      ],
-      "joints": []
-    },
-    {
-      "header": {
-        "ID": "passive_link_l_90",
-        "name": "passive_link_l_90",
-        "date": "2023-11-14",
-        "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
-        ],
-        "email": [
-          ""
-        ],
-        "affiliation": [
-          ""
-        ],
-        "cost": 0.0
-      },
-      "bodies": [
-        {
-          "ID": "passive_link_l_90",
-          "mass": 0.0,
-          "inertia": [
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ]
-          ],
-          "r_com": [ 0.0, 0.0, 0.0 ],
-          "connectors": [
-            {
-              "ID": "l_90_distal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.08 ],
-                [ 0.0, -1.0, 0.0, 0.08 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "m",
-              "type": "",
-              "size": []
-            },
-            {
-              "ID": "l_90_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
-                [ 0.0, 0.0, -1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "f",
-              "type": "",
-              "size": []
-            }
           ],
           "collision": [
             {
               "type": "mesh",
               "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_l_90.stl",
-                "scale": [ 0.001, 0.001, 0.001 ]
-              },
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ]
-            }
-          ]
-        }
-      ],
-      "joints": []
-    },
-    {
-      "header": {
-        "ID": "passive_link_straight_140",
-        "name": "passive_link_straight_140",
-        "date": "2023-11-14",
-        "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
-        ],
-        "email": [
-          ""
-        ],
-        "affiliation": [
-          ""
-        ],
-        "cost": 0.0
-      },
-      "bodies": [
-        {
-          "ID": "passive_link_straight_140",
-          "mass": 0.0,
-          "inertia": [
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ]
-          ],
-          "r_com": [ 0.0, 0.0, 0.0 ],
-          "connectors": [
-            {
-              "ID": "straight_140_distal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.14 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "m",
-              "type": "",
-              "size": []
-            },
-            {
-              "ID": "straight_140_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
-                [ 0.0, 0.0, -1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "f",
-              "type": "",
-              "size": []
-            }
-          ],
-          "collision": [
-            {
-              "type": "mesh",
-              "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_straight_140.stl",
-                "scale": [ 0.001, 0.001, 0.001 ]
-              },
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ]
-            }
-          ]
-        }
-      ],
-      "joints": []
-    },
-    {
-      "header": {
-        "ID": "passive_link_straight_350",
-        "name": "passive_link_straight_350",
-        "date": "2023-11-14",
-        "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
-        ],
-        "email": [
-          ""
-        ],
-        "affiliation": [
-          ""
-        ],
-        "cost": 0.0
-      },
-      "bodies": [
-        {
-          "ID": "passive_link_straight_350",
-          "mass": 0.0,
-          "inertia": [
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ]
-          ],
-          "r_com": [ 0.0, 0.0, 0.0 ],
-          "connectors": [
-            {
-              "ID": "straight_350_distal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.35 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "m",
-              "type": "",
-              "size": []
-            },
-            {
-              "ID": "straight_350_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
-                [ 0.0, 0.0, -1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "f",
-              "type": "",
-              "size": []
-            }
-          ],
-          "collision": [
-            {
-              "type": "mesh",
-              "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_straight_350.stl",
-                "scale": [ 0.001, 0.001, 0.001 ]
-              },
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ]
-            }
-          ]
-        }
-      ],
-      "joints": []
-    },
-    {
-      "header": {
-        "ID": "passive_link_straight_70",
-        "name": "passive_link_straight_70",
-        "date": "2023-11-14",
-        "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
-        ],
-        "email": [
-          ""
-        ],
-        "affiliation": [
-          ""
-        ],
-        "cost": 0.0
-      },
-      "bodies": [
-        {
-          "ID": "passive_link_straight_70",
-          "mass": 0.0,
-          "inertia": [
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ],
-            [ 0.0, 0.0, 0.0 ]
-          ],
-          "r_com": [ 0.0, 0.0, 0.0 ],
-          "connectors": [
-            {
-              "ID": "straight_70_distal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.07 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "m",
-              "type": "",
-              "size": []
-            },
-            {
-              "ID": "straight_70_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
-                [ 0.0, 0.0, -1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "f",
-              "type": "",
-              "size": []
-            }
-          ],
-          "collision": [
-            {
-              "type": "mesh",
-              "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/passive_link_straight_70.stl",
+                "file": "fhi_resources/models/modular/meshes/flange.stl",
                 "scale": [ 0.001, 0.001, 0.001 ]
               },
               "pose": [
@@ -1135,7 +1127,7 @@
               ],
               "gender": "f",
               "type": "",
-              "size": []
+              "size": [ 1 ]
             }
           ],
           "visual": [
@@ -1189,7 +1181,7 @@
               ],
               "gender": "m",
               "type": "",
-              "size": []
+              "size": [ 1 ]
             }
           ],
           "visual": [
@@ -1256,79 +1248,6 @@
           "frictionViscous": 0.0
         }
       ]
-    },
-    {
-      "header": {
-        "ID": "tool_exchanger",
-        "name": "Tool Exchanger",
-        "date": "2023-11-14",
-        "author": [
-          "IIT",
-          "FhI",
-          "Jonathan K\u00fclz"
-        ],
-        "email": [
-          ""
-        ],
-        "affiliation": [
-          ""
-        ],
-        "cost": 0.0
-      },
-      "bodies": [
-        {
-          "ID": "tool_exchanger",
-          "mass": 1.305,
-          "inertia": [
-            [ 0.0018769887, 0.0, 0.0 ],
-            [ 0.0, 0.0022629779, 0.0 ],
-            [ 0.0, 0.0, 0.001888755 ]
-          ],
-          "r_com": [ -0.007, 0.0, 0.044 ],
-          "connectors": [
-            {
-              "ID": "eef",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.222 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "m",
-              "type": "eef",
-              "size": []
-            },
-            {
-              "ID": "eef_proximal",
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, -1.0, -0.0, 0.0 ],
-                [ 0.0, 0.0, -1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ],
-              "gender": "f",
-              "type": "",
-              "size": []
-            }
-          ],
-          "collision": [
-            {
-              "type": "mesh",
-              "parameters": {
-                "file": "modularbots_fraunhofer/ModularBot_6DOF/database/modular/meshes/tool_exchanger.stl",
-                "scale": [ 0.001, 0.001, 0.001 ]
-              },
-              "pose": [
-                [ 1.0, 0.0, 0.0, 0.0 ],
-                [ 0.0, 1.0, 0.0, 0.0 ],
-                [ 0.0, 0.0, 1.0, 0.0 ],
-                [ 0.0, 0.0, 0.0, 1.0 ]
-              ]
-            }
-          ]
-        }
-      ],
-      "joints": []
     }
   ]
 }

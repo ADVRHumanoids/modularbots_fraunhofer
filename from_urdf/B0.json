@@ -1,0 +1,497 @@
+{
+  "header": {
+    "ID": "B0",
+    "name": "Omnidirectional Base (proxy)",
+    "date": "2023-11-14",
+    "author": [
+      "Jonathan K\u00fclz"
+    ],
+    "email": [
+      ""
+    ],
+    "affiliation": [
+      ""
+    ],
+    "cost": 0.0
+  },
+  "bodies": [
+    {
+      "ID": "base2world_proxy",
+      "mass": 0.0,
+      "inertia": [
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "r_com": [ 0.0, 0.0, 0.0 ],
+      "connectors": [
+        {
+          "ID": "proximal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, -1.0, -0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "f",
+          "type": "base",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "ID": "between_joints_first_proxy",
+      "mass": 0.0,
+      "inertia": [
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "r_com": [ 0.0, 0.0, 0.0 ],
+      "connectors": []
+    },
+    {
+      "ID": "between_joints_second_proxy",
+      "mass": 0.0,
+      "inertia": [
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "r_com": [ 0.0, 0.0, 0.0 ],
+      "connectors": []
+    },
+    {
+      "ID": "robot_chassis_link_0",
+      "mass": 100.0,
+      "inertia": [
+        [ 4.253301249999998, -5.551115123125783e-17, 0.04821529999999985 ],
+        [ -5.551115123125783e-17, 8.887122005733334, -1.1102230246251565e-16 ],
+        [ 0.04821529999999985, -1.1102230246251565e-16, 10.890271589066668 ]
+      ],
+      "r_com": [ 0.00488400000000002, 1.734723475976807e-18, 0.24408333333333337 ],
+      "connectors": [
+        {
+          "ID": "distal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.123 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.8395 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "m",
+          "type": "",
+          "size": 1
+        }
+      ],
+      "visual": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.368 ],
+            [ 0.0, 0.0, -1.0, -0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ -1.0, -0.0, 0.0, -0.368 ],
+            [ 0.0, -1.0, 0.0, -0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.368 ],
+            [ 0.0, 0.0, -1.0, 0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.368 ],
+            [ 0.0, 1.0, 0.0, 0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.368 ],
+            [ 0.0, 0.0, -1.0, -0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ -1.0, -0.0, 0.0, 0.368 ],
+            [ 0.0, -1.0, 0.0, -0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/wheel_sxl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.368 ],
+            [ 0.0, 0.0, -1.0, 0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.368 ],
+            [ 0.0, 1.0, 0.0, 0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/shrp0_221025aa_description/meshes/part01-color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ -1.0, 4e-10, 0.0, -0.012 ],
+            [ -4e-10, -1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.5525 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_leds.stl",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.012 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.39 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_contactors.stl",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.5115 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.38015 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_battery.stl",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.01752 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.2875 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_chassis_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.012 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.2875 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_logos.stl",
+            "scale": [ 1.001, 1.076, 1.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.027 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ],
+      "collision": [
+        {
+          "type": "cylinder",
+          "parameters": {
+            "r": 0.1165,
+            "z": 0.1165
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.368 ],
+            [ 0.0, 0.0, -1.0, -0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ -1.0, -0.0, 0.0, -0.368 ],
+            [ 0.0, -1.0, 0.0, -0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "cylinder",
+          "parameters": {
+            "r": 0.1165,
+            "z": 0.1165
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.368 ],
+            [ 0.0, 0.0, -1.0, 0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.368 ],
+            [ 0.0, 1.0, 0.0, 0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "cylinder",
+          "parameters": {
+            "r": 0.1165,
+            "z": 0.1165
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.368 ],
+            [ 0.0, 0.0, -1.0, -0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ -1.0, -0.0, 0.0, 0.368 ],
+            [ 0.0, -1.0, 0.0, -0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "cylinder",
+          "parameters": {
+            "r": 0.1165,
+            "z": 0.1165
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.368 ],
+            [ 0.0, 0.0, -1.0, 0.235 ],
+            [ 0.0, 1.0, 0.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/wheels/mw_frame_stl_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.368 ],
+            [ 0.0, 1.0, 0.0, 0.235 ],
+            [ 0.0, 0.0, 1.0, 0.11 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_battery.stl",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.01752 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.2875 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        },
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "rbvogui_common/rbvogui_description/meshes/bases/rbvogui_chassis_color.dae",
+            "scale": [ 1.0, 1.0, 1.0 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, -0.012 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.2875 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "ID": "omni_rot",
+      "parent": "between_joints_second_proxy",
+      "child": "robot_chassis_link_0",
+      "type": "revolute",
+      "passive": false,
+      "poseParent": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 1.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "poseChild": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 1.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "limits": {
+        "positionLower": -Infinity,
+        "positionUpper": Infinity,
+        "peakTorque": Infinity,
+        "velocity": 0.5,
+        "acceleration": 0.5
+      },
+      "gearRatio": 1.0,
+      "motorInertia": 0.0,
+      "frictionCoulomb": 0.0,
+      "frictionViscous": 0.0
+    },
+    {
+      "ID": "omni_x",
+      "parent": "base2world_proxy",
+      "child": "between_joints_first_proxy",
+      "type": "prismatic",
+      "passive": false,
+      "poseParent": [
+        [ 0.0, 0.0, 1.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ -1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "poseChild": [
+        [ 0.0, 0.0, -1.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "limits": {
+        "positionLower": -Infinity,
+        "positionUpper": Infinity,
+        "peakTorque": Infinity,
+        "velocity": 1.7,
+        "acceleration": 1.5
+      },
+      "gearRatio": 1.0,
+      "motorInertia": 0.0,
+      "frictionCoulomb": 0.0,
+      "frictionViscous": 0.0
+    },
+    {
+      "ID": "omni_y",
+      "parent": "between_joints_first_proxy",
+      "child": "between_joints_second_proxy",
+      "type": "prismatic",
+      "passive": false,
+      "poseParent": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 1.0, 0.0 ],
+        [ 0.0, -1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "poseChild": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, -1.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "limits": {
+        "positionLower": -Infinity,
+        "positionUpper": Infinity,
+        "peakTorque": Infinity,
+        "velocity": 1.7,
+        "acceleration": 1.5
+      },
+      "gearRatio": 1.0,
+      "motorInertia": 0.0,
+      "frictionCoulomb": 0.0,
+      "frictionViscous": 0.0
+    }
+  ]
+}

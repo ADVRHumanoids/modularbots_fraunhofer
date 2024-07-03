@@ -1,0 +1,161 @@
+{
+  "header": {
+    "ID": "straight_joint",
+    "name": "straight_joint",
+    "date": "2023-11-14",
+    "author": [
+      "IIT",
+      "FhI",
+      "Jonathan K\u00fclz"
+    ],
+    "email": [
+      ""
+    ],
+    "affiliation": [
+      ""
+    ],
+    "cost": 0.0
+  },
+  "bodies": [
+    {
+      "ID": "J1_A_stator_0",
+      "mass": 2.0564934,
+      "inertia": [
+        [ 0.010700811259057098, -1.14168e-05, 2.71689e-06 ],
+        [ -1.14168e-05, 0.010597168259057098, 8.76312e-05 ],
+        [ 2.71689e-06, 8.76312e-05, 0.0032036258 ]
+      ],
+      "r_com": [ 0.0, 0.0, 0.10609327549445383 ],
+      "connectors": [
+        {
+          "ID": "proximal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, -1.0, -0.0, 0.0 ],
+            [ 0.0, 0.0, -1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "f",
+          "type": "",
+          "size": 1
+        }
+      ],
+      "visual": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_base.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ],
+      "collision": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_base.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    },
+    {
+      "ID": "L_1_A_0",
+      "mass": 0.62034795,
+      "inertia": [
+        [ 0.0015244832047166712, 1.1661133999999999e-05, 4.44352172e-06 ],
+        [ 1.1661133999999999e-05, 0.0015293181347166586, 1.9540661300000002e-05 ],
+        [ 4.44352172e-06, 1.9540661300000002e-05, 0.12977347399999997 ]
+      ],
+      "r_com": [ 0.0, 0.0, -0.047781250285749075 ],
+      "connectors": [
+        {
+          "ID": "distal",
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ],
+          "gender": "m",
+          "type": "",
+          "size": 1
+        }
+      ],
+      "visual": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_link.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ],
+      "collision": [
+        {
+          "type": "mesh",
+          "parameters": {
+            "file": "modularbots_fraunhofer/ModularBot/database/modular/meshes/simple/yaw_link.stl",
+            "scale": [ 0.001, 0.001, 0.001 ]
+          },
+          "pose": [
+            [ 1.0, 0.0, 0.0, 0.0 ],
+            [ 0.0, 1.0, 0.0, 0.0 ],
+            [ 0.0, 0.0, 1.0, 0.0 ],
+            [ 0.0, 0.0, 0.0, 1.0 ]
+          ]
+        }
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "ID": "J1_A",
+      "parent": "J1_A_stator_0",
+      "child": "L_1_A_0",
+      "type": "revolute",
+      "passive": false,
+      "poseParent": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 1.0, 0.214 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "poseChild": [
+        [ 1.0, 0.0, 0.0, 0.0 ],
+        [ 0.0, 1.0, 0.0, 0.0 ],
+        [ 0.0, 0.0, 1.0, 0.0 ],
+        [ 0.0, 0.0, 0.0, 1.0 ]
+      ],
+      "limits": {
+        "positionLower": -2.8,
+        "positionUpper": 2.8,
+        "peakTorque": 147.0,
+        "velocity": 3.9,
+        "acceleration": Infinity
+      },
+      "gearRatio": 1.0,
+      "motorInertia": 0.0,
+      "frictionCoulomb": 0.0,
+      "frictionViscous": 0.0
+    }
+  ]
+}
